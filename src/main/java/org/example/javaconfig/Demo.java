@@ -9,8 +9,10 @@ public class Demo {
 //        ApplicationContext context = new ClassPathXmlApplicationContext("javaconfig.xml");
         ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
 //        Student student = context.getBean("firstStudent", Student.class);
-        Student student = context.getBean("getStudent", Student.class);
-        System.out.println(student);
+//        Student student = context.getBean("getStudent", Student.class);
+        Student student = context.getBean("firstStudent", Student.class);
+        Student student1 = context.getBean("secondStudent", Student.class);
         student.study();
+        student1.study();
     }
 }
