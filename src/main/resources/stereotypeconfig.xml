@@ -7,5 +7,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    component-scan allow krta h ki vo given package or uske sub packages m component(bean) ke liye scan kr ske-->
     <context:component-scan base-package="org.example.stereotypeAnnotations"/>
 </beans>

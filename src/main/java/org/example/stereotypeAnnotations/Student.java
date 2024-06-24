@@ -1,25 +1,26 @@
 package org.example.stereotypeAnnotations;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("thisIsTheBeanNameCreatedBySpring")
 public class Student {
+    @Value("Akash")
     private String name;
-    private int age;
-    private String email;
-    private String address;
+    @Value("25")
+    private int city;
 
     public Student() {
     }
 
     public Student(String name, int age) {
         this.name = name;
-        this.age = age;
+        this.city = age;
     }
 
     public void displayStudentInfo() {
         System.out.println("Student name: " + name);
-        System.out.println("Student age: " + age);
+        System.out.println("Student age: " + city);
     }
 
     //    setter and getter methods
@@ -27,8 +28,8 @@ public class Student {
         this.name = name;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setCity(int city) {
+        this.city = city;
     }
 
 
@@ -36,8 +37,15 @@ public class Student {
         return name;
     }
 
-    public int getAge() {
-        return age;
+    public int getCity() {
+        return city;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", city=" + city +
+                '}';
+    }
 }
