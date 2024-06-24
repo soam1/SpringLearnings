@@ -3,6 +3,9 @@ package org.example.stereotypeAnnotations;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Component("thisIsTheBeanNameCreatedBySpring")
 public class Student {
     @Value("Akash")
@@ -10,12 +13,17 @@ public class Student {
     @Value("25")
     private int city;
 
+    @Value("#{temp}")
+    private List<String> addresses;
+
     public Student() {
+        super();
     }
 
-    public Student(String name, int age) {
+    public Student(String name, int age, List<String> addresses) {
         this.name = name;
         this.city = age;
+        this.addresses = addresses;
     }
 
     public void displayStudentInfo() {
@@ -46,6 +54,15 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", city=" + city +
+                ", addresses=" + Arrays.toString(addresses.toArray()) +
                 '}';
+    }
+
+    public List<String> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<String> addresses) {
+        this.addresses = addresses;
     }
 }

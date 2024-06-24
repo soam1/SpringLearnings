@@ -15,5 +15,6 @@ public class App {
 //        Student student = context.getBean("student", Student.class);
         Student student = context.getBean("thisIsTheBeanNameCreatedBySpring", Student.class);
         System.out.println(student);
+        System.out.println(student.getAddresses());
     }
 }
