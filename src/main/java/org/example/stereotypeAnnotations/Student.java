@@ -1,12 +1,14 @@
 package org.example.stereotypeAnnotations;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Component("thisIsTheBeanNameCreatedBySpring")
+@Scope("prototype")
 public class Student {
     @Value("Akash")
     private String name;
