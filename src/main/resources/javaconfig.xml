@@ -10,14 +10,7 @@
        http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <!--    component-scan allow krta h ki vo given package or uske sub packages m component(bean) ke liye scan kr ske-->
-    <context:component-scan base-package="org.example.stereotypeAnnotations"/>
 
-    <util:list list-class="java.util.ArrayList" id="temp">
-        <value>Hamirpur</value>
-        <value>Meerut</value>
-        <value>Bangalore</value>
-
-    </util:list>
+    <context:component-scan base-package="com.spring.javaconfig"/>
 </beans>
 

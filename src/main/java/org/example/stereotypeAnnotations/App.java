@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
 //        System.out.println( "Hello World!" );
-        ApplicationContext context = new ClassPathXmlApplicationContext("stereotypeconfig.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("javaconfig.xml");
 //        Student student = (Student) context.getBean("student");
 
 //        Student student = context.getBean("student", Student.class);
